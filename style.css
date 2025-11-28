@@ -51,20 +51,22 @@ h1, h2, h3, h4, h5, h6, .section-title, .experience-title {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--text-secondary);
+    margin-bottom: 1.5rem; /* Added margin */
 }
 
 h1.h3 {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Increased font size */
     color: var(--text-primary);
-    margin-top: 1rem;
+    margin-top: 0.5rem; /* Reduced margin */
+    margin-bottom: 0.5rem; /* Added margin */
 }
 
 h2.h5 {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Slightly increased font size */
     color: var(--text-secondary);
-    margin-bottom: 0;
+    margin-bottom: 1.5rem; /* Adjusted margin */
 }
 
 /* Navigation */
@@ -72,14 +74,21 @@ h2.h5 {
     margin-bottom: auto;
 }
 
+.nav-item {
+    margin-bottom: 0.5rem; /* Space between bordered items */
+    border: 1px solid var(--border-color); /* Full border around each item */
+    border-radius: 5px; /* Rounded corners for the item */
+    overflow: hidden; /* To keep the border-radius effective */
+}
+
 .nav-link {
     color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 1.15rem; /* Slightly increased font size */
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.2s, background-color 0.2s;
-    border-radius: 5px;
-    margin: 0.25rem 0;
+    /* Removed border-radius, margin, and borders from here */
+    display: block; /* Make the link fill the item */
 }
 
 .nav-link:hover {
@@ -99,13 +108,41 @@ h2.h5 {
     margin-top: 2rem; /* Add some space above */
 }
 
-.company-logo {
-    max-width: 100px;
-    filter: invert(1);
+.company-logo-bg {
+    background-color: #ffffff;
+    width: 3rem; /* Adjusted for bigger logo */
+    height: 3rem; /* Adjusted for bigger logo */
+    border-radius: 0; /* Square corners */
+    display: flex; /* Use flex to center the image */
+    align-items: center;
+    justify-content: center;
 }
 
-.company-info {
-    margin-bottom: 1.5rem;
+.company-logo {
+    height: 2.2rem; /* Even bigger logo */
+    width: auto;
+}
+
+.company-link {
+    text-decoration: none;
+    color: var(--text-secondary); /* Default color */
+    transition: color 0.2s;
+    display: flex; /* Make the link a flex container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.company-link:hover {
+    color: var(--dev-green); /* Hover color */
+}
+
+.company-link p {
+    color: inherit; /* Inherit color from the link */
+    font-size: 1.1rem; /* Matched social-text size */
+    font-weight: 300; /* Kept default weight */
+    margin-top: 0.5rem; /* Space between logo and name */
+    margin-bottom: 0; /* Remove default paragraph margin */
+    font-family: 'Fira Code', monospace; /* Matched social-text font */
 }
 
 .company-info p {
@@ -115,18 +152,7 @@ h2.h5 {
     margin-bottom: 0.25rem;
 }
 
-.company-website {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 300;
-    transition: color 0.2s;
-    font-family: 'Fira Code', monospace;
-}
 
-.company-website:hover {
-    color: var(--dev-green);
-}
 
 
 .social-links {
@@ -136,7 +162,7 @@ h2.h5 {
 }
 
 .social-links a {
-    color: var(--text-secondary);
+    color: var(--text-primary); /* Light color, brighter */
     font-size: 1rem; /* Base font size for the whole link */
     margin: 0.4rem 0; /* Vertical margin */
     transition: color 0.2s;
@@ -146,17 +172,17 @@ h2.h5 {
 }
 
 .social-links a i {
-    margin-right: 0.6rem; /* Space between icon and text */
-    font-size: 1.2rem; /* Ensure icon size is good */
+    margin-right: 0.6rem;
+    font-size: 2.2rem; /* Even bigger icons */
 }
 
 .social-links a:hover {
-    color: var(--dev-green);
+    color: var(--text-primary); /* New hover color */
 }
 
 .social-text {
-    font-size: 0.95rem; /* Adjust text size */
-    font-family: 'Fira Code', monospace; /* Use dev font for text */
+    font-size: 1.1rem; /* Slightly larger text for balance */
+    font-family: 'Fira Code', monospace;
 }
 
 
@@ -166,14 +192,14 @@ h2.h5 {
 }
 
 .section {
-    padding-bottom: 4rem;
+    padding-bottom: 1.5rem; /* Further reduced spacing between sections */
 }
 
 .section-title {
     font-weight: 500;
-    font-size: 2.75rem;
+    font-size: 3rem; /* Increased font size */
     color: var(--text-primary);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem; /* Further reduced margin */
     text-align: left;
 }
 
@@ -181,6 +207,7 @@ h2.h5 {
     font-size: 1.15rem;
     font-weight: 300;
     line-height: 1.7;
+    margin-bottom: 1.5rem; /* Further reduced margin */
 }
 
 .experience-card {
@@ -199,8 +226,9 @@ h2.h5 {
 
 .experience-title {
     font-weight: 500;
-    font-size: 1.35rem;
+    font-size: 1.45rem; /* Increased font size */
     color: var(--text-primary);
+    margin-bottom: 0.75rem; /* Reduced margin */
 }
 
 .experience-role {
@@ -213,16 +241,27 @@ h2.h5 {
 .experience-card ul {
     padding-left: 20px;
     font-weight: 300;
+    line-height: 1.6; /* Increased line-height */
 }
 
-.skills-category {
-    margin-bottom: 2rem;
+.skills-card {
+    background-color: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem; /* Reduced padding */
+    height: 100%; /* Make cards same height */
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-.skills-category h4 {
+.skills-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dev-green);
+}
+
+.skills-card h4 {
     font-family: 'Fira Code', monospace;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* Increased font size */
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
@@ -237,12 +276,13 @@ h2.h5 {
     margin: 0.25rem;
     font-size: 0.95rem;
     font-weight: 300;
-    transition: color 0.2s, border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 }
 
 .skill-badge:hover {
     color: var(--dev-green);
     border-color: var(--dev-green);
+    background-color: #3a3a3a; /* Slightly lighter background on hover */
 }
 
 /* Responsive adjustments */
@@ -261,6 +301,6 @@ h2.h5 {
     }
     .section-title {
         text-align: center;
-        font-size: 2.2rem;
+        font-size: 2.5rem; /* Adjusted for smaller screens */
     }
 }
