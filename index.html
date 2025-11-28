@@ -7,134 +7,175 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <img src="images/pic.jpg" alt="Reza Ameli" class="profile-img mb-4">
-            <h1>Reza Ameli</h1>
-            <h2>System Architect | High-Performance Computing & Network Acceleration</h2>
-            <div class="social-links">
-                <a href="https://github.com/rameli" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-        </header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-lg-3 col-md-4 d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <header class="header">
+                        <img src="images/pic.jpg" alt="Reza Ameli" class="profile-img mb-4">
+                        <h1 class="h3">Reza Ameli</h1>
+                        <h2 class="h5">System Architect | High-Performance Computing & Network Acceleration</h2>
+                    </header>
 
-        <!-- About Section -->
-        <section class="section">
-            <h3 class="section-title">About Me</h3>
-            <p class="about-text">
-                I am an Electrical Engineer and System Architect with over a decade of experience in <strong>High-Performance Computing (HPC)</strong>, <strong>accelerator design</strong>, and <strong>distributed networking</strong>. My engineering philosophy centers on <strong>end-to-end system analysis</strong>—optimizing the complete data path from the physical layer (PHY) and FPGA logic up to the CPU cache and userspace applications.
-                <br><br>
-                I specialize in solving complex engineering problems where software meets hardware, such as minimizing latency in <strong>Satellite Communications (SATCOM)</strong>, architecting <strong>5G network accelerators</strong>, and designing fault-tolerant <strong>embedded Linux</strong> systems.
-            </p>
-        </section>
+                    <ul class="nav flex-column" id="main-nav">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    </ul>
+                    
+                    <div class="sidebar-footer">
+                        <div class="company-info mb-3">
+                            <img src="assets/logo.png" alt="Complex Wave Technologies Logo" class="company-logo mb-2">
+                            <p class="mb-1">Complex Wave Technologies .Inc.</p>
+                            <a href="https://complexwave.tech" target="_blank" class="company-website">complexwave.tech</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/rameli" target="_blank" title="GitHub"><i class="fab fa-github"></i> <span class="social-text">rameli</span></a>
+                            <a href="#" id="contact-link" class="email-link" title="Email"><i class="fas fa-envelope"></i> <span class="social-text"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
-        <!-- Experience Section -->
-        <section class="section">
-            <h3 class="section-title">Experience</h3>
-            <div class="experience-card">
-                <h4 class="experience-title">Low-Latency LEO Satellite Communications (2025)</h4>
-                <h5 class="experience-role">Senior Low-latency SatCom Architect</h5>
-                <ul>
-                    <li>Optimized network throughput and latency for Low Earth Orbit (LEO) satellite constellations.</li>
-                    <li>Designed a low-latency FPGA-based packet switching architecture supporting <strong>10 GbE and 100 GbE</strong> networking.</li>
-                    <li>Conducted end-to-end latency optimization from Ethernet ingress to CPU cache processing, ensuring high-reliability data transmission.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <h4 class="experience-title">5G Network Acceleration & Architecture (2021-2024)</h4>
-                <h5 class="experience-role">System Architect and Team Lead</h5>
-                <ul>
-                    <li>Architected a <strong>2x25 GbE traffic processing accelerator</strong> and a custom <strong>L2 Switch</strong> on FPGA for high-bandwidth 5G traffic.</li>
-                    <li>Designed the <strong>Hardware Abstraction Layer (HAL)</strong> for seamless SW-FPGA interaction.</li>
-                    <li>Implemented IEEE 1588 (PTP) stacks for precise network synchronization.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <h4 class="experience-title">Embedded Linux & Distributed Systems (2024)</h4>
-                <h5 class="experience-role">Senior Software Developer (Consultant)</h5>
-                <ul>
-                    <li>Focused on multi-threaded, fault-tolerant <strong>C++20</strong> development for embedded Linux systems on Xilinx ZynqMPSoC.</li>
-                    <li>Developed custom kernel drivers for character/MDIO devices and designed complex monitoring systems.</li>
-                </ul>
-            </div>
-             <div class="experience-card">
-                <h4 class="experience-title">High-Performance Feasibility Assessment</h4>
-                <h5 class="experience-role">Cryptocurrency Mining Application Feasibility</h5>
-                <ul>
-                    <li>Simulated <strong>DDR4 bandwidth efficiency</strong> to determine hardware viability.</li>
-                    <li>Analyzed <strong>SHA2/3 processing latency</strong> and resource utilization on FPGAs for large-scale operations.</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Main Content -->
+            <main class="col-lg-9 col-md-8 ms-sm-auto px-md-4 main-content">
+                <section id="about" class="section pt-4">
+                    <h3 class="section-title">About Me</h3>
+                    <p class="about-text">
+                        I am an Electrical Engineer and System Architect with over a decade of experience in <strong>High-Performance Computing (HPC)</strong>, <strong>accelerator design</strong>, and <strong>distributed networking</strong>. My engineering philosophy centers on <strong>end-to-end system analysis</strong>—optimizing the complete data path from the physical layer (PHY) and FPGA logic up to the CPU cache and userspace applications.
+                        <br><br>
+                        I specialize in solving complex engineering problems where software meets hardware, such as minimizing latency in <strong>Satellite Communications (SATCOM)</strong>, architecting <strong>5G network accelerators</strong>, and designing fault-tolerant <strong>embedded Linux</strong> systems.
+                    </p>
+                </section>
 
-        <!-- Skills Section -->
-        <section class="section">
-            <h3 class="section-title">Technical Competencies</h3>
-            <div class="skills-category">
-                <h4>System Software</h4>
-                <span class="skill-badge">C++ (STL, C++20)</span>
-                <span class="skill-badge">Rust</span>
-                <span class="skill-badge">C</span>
-                <span class="skill-badge">Go</span>
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">Bash</span>
-            </div>
-            <div class="skills-category">
-                <h4>Embedded Linux</h4>
-                <span class="skill-badge">Kernel Driver Dev</span>
-                <span class="skill-badge">PCIe</span>
-                <span class="skill-badge">UIO/IIO</span>
-                <span class="skill-badge">DeviceTree</span>
-                <span class="skill-badge">Yocto</span>
-            </div>
-            <div class="skills-category">
-                <h4>FPGA & Hardware</h4>
-                <span class="skill-badge">Verilog</span>
-                <span class="skill-badge">SystemVerilog</span>
-                <span class="skill-badge">VHDL</span>
-                <span class="skill-badge">Vivado</span>
-                <span class="skill-badge">HLS</span>
-                <span class="skill-badge">Intel Quartus</span>
-            </div>
-            <div class="skills-.
-category">
-                <h4>Networking</h4>
-                <span class="skill-badge">100 GbE</span>
-                <span class="skill-badge">gRPC</span>
-                <span class="skill-badge">NETCONF/YANG</span>
-                <span class="skill-badge">L2 Switching</span>
-                <span class="skill-badge">IEEE 1588 PTP</span>
-            </div>
-            <div class="skills-category">
-                <h4>Cloud & DevOps</h4>
-                <span class="skill-badge">Docker</span>
-                <span class="skill-badge">AWS (EC2, Lambda)</span>
-                <span class="skill-badge">GitHub Actions</span>
-                <span class="skill-badge">Jenkins</span>
-            </div>
-        </section>
+                <section id="experience" class="section">
+                    <h3 class="section-title">Experience</h3>
+                    <div class="experience-card">
+                        <h4 class="experience-title">Low-Latency LEO Satellite Communications (2025)</h4>
+                        <h5 class="experience-role">Senior Low-latency SatCom Architect</h5>
+                        <ul>
+                            <li>Optimized network throughput and latency for Low Earth Orbit (LEO) satellite constellations.</li>
+                            <li>Designed a low-latency FPGA-based packet switching architecture supporting <strong>10 GbE and 100 GbE</strong> networking.</li>
+                            <li>Conducted end-to-end latency optimization from Ethernet ingress to CPU cache processing, ensuring high-reliability data transmission.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <h4 class="experience-title">5G Network Acceleration & Architecture (2021-2024)</h4>
+                        <h5 class="experience-role">System Architect and Team Lead</h5>
+                        <ul>
+                            <li>Architected a <strong>2x25 GbE traffic processing accelerator</strong> and a custom <strong>L2 Switch</strong> on FPGA for high-bandwidth 5G traffic.</li>
+                            <li>Designed the <strong>Hardware Abstraction Layer (HAL)</strong> for seamless SW-FPGA interaction.</li>
+                            <li>Implemented IEEE 1588 (PTP) stacks for precise network synchronization.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <h4 class="experience-title">Embedded Linux & Distributed Systems (2024)</h4>
+                        <h5 class="experience-role">Senior Software Developer (Consultant)</h5>
+                        <ul>
+                            <li>Focused on multi-threaded, fault-tolerant <strong>C++20</strong> development for embedded Linux systems on Xilinx ZynqMPSoC.</li>
+                            <li>Developed custom kernel drivers for character/MDIO devices and designed complex monitoring systems.</li>
+                        </ul>
+                    </div>
+                     <div class="experience-card">
+                        <h4 class="experience-title">High-Performance Feasibility Assessment</h4>
+                        <h5 class="experience-role">Cryptocurrency Mining Application Feasibility</h5>
+                        <ul>
+                            <li>Simulated <strong>DDR4 bandwidth efficiency</strong> to determine hardware viability.</li>
+                            <li>Analyzed <strong>SHA2/3 processing latency</strong> and resource utilization on FPGAs for large-scale operations.</li>
+                        </ul>
+                    </div>
+                </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="#" id="contact-link" class="email-link"></a>
-        </footer>
+                <section id="skills" class="section">
+                    <h3 class="section-title">Technical Competencies</h3>
+                    <div class="skills-category">
+                        <h4>System Software</h4>
+                        <span class="skill-badge">C++ (STL, C++20)</span>
+                        <span class="skill-badge">Rust</span>
+                        <span class="skill-badge">C</span>
+                        <span class="skill-badge">Go</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Bash</span>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Embedded Linux</h4>
+                        <span class="skill-badge">Kernel Driver Dev</span>
+                        <span class="skill-badge">PCIe</span>
+                        <span class="skill-badge">UIO/IIO</span>
+                        <span class="skill-badge">DeviceTree</span>
+                        <span class="skill-badge">Yocto</span>
+                    </div>
+                    <div class="skills-category">
+                        <h4>FPGA & Hardware</h4>
+                        <span class="skill-badge">Verilog</span>
+                        <span class="skill-badge">SystemVerilog</span>
+                        <span class="skill-badge">VHDL</span>
+                        <span class="skill-badge">Vivado</span>
+                        <span class="skill-badge">HLS</span>
+                        <span class="skill-badge">Intel Quartus</span>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Networking</h4>
+                        <span class="skill-badge">100 GbE</span>
+                        <span class="skill-badge">gRPC</span>
+                        <span class="skill-badge">NETCONF/YANG</span>
+                        <span class="skill-badge">L2 Switching</span>
+                        <span class="skill-badge">IEEE 1588 PTP</span>
+                    </div>
+                    <div class="skills-category">
+                        <h4>Cloud & DevOps</h4>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">AWS (EC2, Lambda)</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">Jenkins</span>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Email obfuscation
             const user = 'rameli';
             const domain = 'rameli.dev';
             const contactLink = document.getElementById('contact-link');
             if(contactLink) {
                 contactLink.href = 'mailto:' + user + '@' + domain;
-                contactLink.innerHTML = '<i class="fas fa-envelope"></i> ' + user + '@' + domain;
+                const emailTextSpan = contactLink.querySelector('.social-text');
+                if (emailTextSpan) {
+                    emailTextSpan.textContent = user + '@' + domain;
+                }
             }
+
+            // Active nav link on scroll
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('#main-nav .nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
