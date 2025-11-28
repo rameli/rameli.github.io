@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #EAEAEA;
+}
+.container {
+    max-width: 960px;
+}
+.header {
+    text-align: center;
+    padding: 4rem 0;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6c757d;
+}
+h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+h2 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #BBBBBB;
+    margin-bottom: 1.5rem;
+}
+.social-links a {
+    color: #BBBBBB;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #FFFFFF;
+}
+.section {
+    padding: 2rem 0;
+}
+.section-title {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.about-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: justify;
+}
+.experience-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.experience-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+}
+.experience-role {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #BBBBBB;
+    margin-bottom: 1rem;
+}
+.experience-card ul {
+    padding-left: 20px;
+    font-weight: 300;
+}
+.skills-category {
+    margin-bottom: 2rem;
+}
+.skills-category h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.skill-badge {
+    display: inline-block;
+    background-color: #333;
+    color: #EAEAEA;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+}
+.email-link {
+    text-decoration: none;
+    color: #BBBBBB;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+.email-link:hover {
+    color: #FFFFFF;
+}
