@@ -304,3 +304,16 @@ h2.h5 {
         font-size: 2.5rem; /* Adjusted for smaller screens */
     }
 }
+
+/* Custom width for large screens */
+@media (min-width: 992px) {
+    .sidebar {
+        flex: 0 0 auto;
+        width: 20%; /* Custom width for sidebar, slightly wider than 18% */
+    }
+    .main-content {
+        flex: 0 0 auto;
+        width: 80%; /* Remaining width for main content */
+        margin-left: auto; /* Re-enable default margin for centering/spacing */
+    }
+}
