@@ -1,1 +1,0 @@
-I've fine-tuned the width of the left navigation column for large screens using custom CSS, setting it to approximately 20% of the viewport width. Please perform a hard refresh in your browser to see these changes. This should provide a good balance between width and content space.
